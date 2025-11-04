@@ -1,10 +1,19 @@
 package io.github.ceciliopf.produtosapi.model;
 
-public class Produto {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table (name = "produto")
+public class Produto {
+    @Id
     private String id;
+
     private String nome;
+
     private String descricao;
+
     private Double preco;
 
     public String getId() {
